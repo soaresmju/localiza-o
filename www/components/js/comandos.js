@@ -1,18 +1,5 @@
 // This is a JavaScript file
-function checkConnection() {
-    var networkState = navigator.connection.type;
-
-    var states = {};
-    states[Connection.UNKNOWN] = 'Sem conexão por favor conectar a uma rede';
-    states[Connection.NONE]     = 'Sem conexão por favor conectar a uma rede';
-
-  navigator.notification.beep(3);
-  navigator.vibrate(6000);
-
-    alert(states[networkState]);
-  }
-
-  $(document).on('click','#btnlocal',function(){
+$(document).on('click','#btnlocal',function(){
 
     navigator.notification.beep(1);
 
@@ -29,4 +16,17 @@ function checkConnection() {
       }     
       navigator.geolocation.getCurrentPosition(abrirmapa);
     
+  function checkConnection() {
+    var networkState = navigator.connection.type;
+
+    var states = {};
+    states[Connection.UNKNOWN] = 'Sem conexão por favor conectar a uma rede';
+    states[Connection.NONE]     = 'Sem conexão por favor conectar a uma rede';
+
+  navigator.notification.beep(3);
+  navigator.vibrate(6000);
+
+    alert(states[networkState]);
+  }
+
   });
