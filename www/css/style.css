@@ -1,0 +1,11 @@
+/**/
+h2{
+  text-align: center;
+}
+#btnlocal{
+  margin-left: 130%;
+}
+#map{
+  width: 100%;
+  height: 500px;
+}
